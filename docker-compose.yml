@@ -1,0 +1,21 @@
+version: '3.8'                             # Define a versão do formato do arquivo Docker Compose. Aqui, estamos usando a versão 3.8.
+
+services:                                  # Início da definição dos serviços que compõem a aplicação.
+
+  rabbitmq:                                # Define um serviço chamado 'rabbitmq'.
+    image: rabbitmq:3-management           # Especifica a imagem do RabbitMQ com suporte à interface de gerenciamento.
+    ports:                                 # Define as portas que serão expostas.
+      - "15672:15672"                      # Mapeia a porta 15672 do host para a porta 15672 do container (interface de gerenciamento).
+      - "5672:5672"                        # Mapeia a porta 5672 do host para a porta 5672 do container (porta padrão do RabbitMQ).
+
+  microservice_1:                          # Define um serviço chamado 'microservice_1'.
+    build:                                 # Inicia a configuração de construção da imagem para este serviço.
+      context: ./microservice_1            # Define o diretório de contexto onde o Dockerfile para este serviço está localizado.
+    ports:                                 # Define as portas que serão expostas.
+      - "5000:5000"                        # Mapeia a porta 5000 do host para a porta 5000 do container.
+
+  microservice_2:                          # Define um serviço chamado 'microservice_2'.
+    build:                                 # Inicia a configuração de construção da imagem para este serviço.
+      context: ./microservice_2            # Define o diretório de contexto onde o Dockerfile para este serviço está localizado.
+    ports:                                 # Define as portas que serão expostas.
+      - "5001:5001"                        # Mapeia a porta 5001 do host para a porta 5001 do container.
