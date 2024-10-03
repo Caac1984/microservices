@@ -1,7 +1,7 @@
 from flask import Flask, request         # Importa as classes Flask e request da biblioteca Flask.
 import requests                          # Importa a biblioteca requests para fazer requisições HTTP.
 
-app = Flask(__name__)                    # Cria uma instância da aplicação Flask.
+app = Flask(Pagamento_teste_)                    # Cria uma instância da aplicação Flask.
 
 @app.route('/pagar', methods=['POST'])   # Define um endpoint '/pagar' que aceita requisições POST.
 def pagar():                             # Define a função que será chamada quando uma requisição for feita para o endpoint '/pagar

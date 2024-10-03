@@ -13,6 +13,8 @@ Este projeto contém dois microserviços utilizando Flask e RabbitMQ para comuni
 ## Como Subir os Serviços
 
 # 1 - Clone este repositório.
+        git clone https://github.com/Caac1984/microservices.git
+         cd microservices
 # 2 - Navegue até a pasta do projeto.
 # 3 - Execute o comando:
 
@@ -22,7 +24,8 @@ Este projeto contém dois microserviços utilizando Flask e RabbitMQ para comuni
 _____________________________________________________________________________________________
 
   #  Verificar se os Serviços Estão Funcionando
-  #  Microserviço 1: Acesse http://localhost:5000/pagar.
-  #  Microserviço 2: Acesse http://localhost:5001/notificar (não acessível diretamente, é um endpoint de notificação).
-RabbitMQ: Acesse a interface de gerenciamento em http://localhost:15672 (usuário: guest, senha: guest).
+  #  Microserviço 1: Acesse http://localhost:5000/pagar
+  #  Microserviço 2: Acesse http://localhost:5001/notificar
+RabbitMQ: Acesse a interface de gerenciamento em http://localhost:15672 (usuário: guest, admin, senha: guest, 123)
 
+# A combinação de microsserviços Python e Docker permite um desenvolvimento simples, ágil, uma implantação mais eficiente e a capacidade de lidar com cargas variáveis.

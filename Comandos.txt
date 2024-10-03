@@ -1,0 +1,18 @@
+Como Executar
+
+1. Clone o repositório:
+  	git clone https://github.com/Caac1984/microservices.git
+ 	cd microservices
+   
+ 2. Executar o Docker:
+ 	docker-compose up --build
+
+3. Acesse o Microserviço 1:
+	http://localhost:5000/pagar
+	Método: POST
+	Corpo da Requisição:
+	{
+	  "valor": 100.00,
+	  "descricao": "Pagamento de teste"
+	}
+
