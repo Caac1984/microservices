@@ -7,8 +7,6 @@ Este projeto contém dois microserviços utilizando Flask e RabbitMQ para comuni
    #      microservice_1: Microserviço que recebe requisições para processar pagamentos.
    #      microservice_2: Microserviço que recebe notificações e envia mensagens para o RabbitMQ.
 
-# Requisitos
-
 - Docker
 - Docker Compose
 
