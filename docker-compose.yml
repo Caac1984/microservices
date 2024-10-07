@@ -1,21 +1,21 @@
-version: '3.8'                             # Define a versão do formato do arquivo Docker Compose. Aqui, estamos usando a versão 3.8.
+version: '3.8'                             # Define a versão do formato do arquivo Docker Compose.
 
 services:                                  # Início da definição dos serviços que compõem a aplicação.
+
+  microservico_1:                          # Define um serviço chamado 'microservico_1'.
+    build:                                 # Inicia a configuração de construção da imagem para este serviço.
+      context: ./microservico_1            # Define o diretório de contexto onde o Dockerfile para este serviço está localizado.
+    ports:                                 # Define as portas que serão expostas.
+      - "8080:8080"                        # Mapeia a porta 8080 do host para a porta 8080 do container.
+
+  microservico_2:                          # Define um serviço chamado 'microservico_2'.
+    build:                                 # Inicia a configuração de construção da imagem para este serviço.
+      context: ./microservico_2            # Define o diretório de contexto onde o Dockerfile para este serviço está localizado.
+    ports:                                 # Define as portas que serão expostas.
+      - "8081:8081"                        # Mapeia a porta 8081 do host para a porta 8081 do container.
 
   rabbitmq:                                # Define um serviço chamado 'rabbitmq'.
     image: rabbitmq:3-management           # Especifica a imagem do RabbitMQ com suporte à interface de gerenciamento.
     ports:                                 # Define as portas que serão expostas.
-      - "15672:15672"                      # Mapeia a porta 15672 do host para a porta 15672 do container (interface de gerenciamento).
-      - "5672:5672"                        # Mapeia a porta 5672 do host para a porta 5672 do container (porta padrão do RabbitMQ).
-
-  microservice_1:                          # Define um serviço chamado 'microservice_1'.
-    build:                                 # Inicia a configuração de construção da imagem para este serviço.
-      context: ./microservice_1            # Define o diretório de contexto onde o Dockerfile para este serviço está localizado.
-    ports:                                 # Define as portas que serão expostas.
-      - "5000:5000"                        # Mapeia a porta 5000 do host para a porta 5000 do container.
-
-  microservice_2:                          # Define um serviço chamado 'microservice_2'.
-    build:                                 # Inicia a configuração de construção da imagem para este serviço.
-      context: ./microservice_2            # Define o diretório de contexto onde o Dockerfile para este serviço está localizado.
-    ports:                                 # Define as portas que serão expostas.
-      - "5001:5001"                        # Mapeia a porta 5001 do host para a porta 5001 do container.
+      - "15673:15672"                      # Mapeia a porta 15672 do host para a porta 15672 do container (interface de gerenciamento).
+      - "5673:5672"                        # Mapeia a porta 5672 do host para a porta 5672 do container (porta padrão do RabbitMQ).

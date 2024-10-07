@@ -16,4 +16,4 @@ def notificar():                                                 # Define a fun�
     return {'status': 'Mensagem enviada'}, 200                   # Retorna um dicionário com o status Mensagem enviada e um código de status 200 (OK).
 
 if __name__ == '__main__':                                       # Verifica se este arquivo está sendo executado diretamente.
-    app.run(host='0.0.0.0', port=5001)                           # Inicia o servidor Flask, tornando a aplicação acessível em todas as interfaces de rede na porta 5001.
+    app.run(host='0.0.0.0',port=8081)                           # Inicia o servidor Flask, tornando a aplicação acessível em todas as interfaces de rede na porta 8081.
